@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    #redCircle{
+        border-radius: 200px 200px 200px 200px;
+        padding: 20px;
+        width:200px;
+        height: 200px;
+        background: red;
+    }
+    </style>
+
+</head>
+
+<body>
+    <p id="redCircle"></p>
+    <script type="text/javascript">
+        document.getElementById('redCircle').onclick=function(){
+            document.getElementById('redCircle').style="visibility: hidden;";
+            /oppure: style.display="none";
+        }
+    </script>
+
+</body>
+</html>

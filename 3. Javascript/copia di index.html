@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+
+</head>
+
+<body>
+    <div id="oldDiv">
+        <p id="text">Some text</p>
+        <button id="textChanger">Change first div text</button>
+        <div id="firstDiv"> This is some text</div>
+        <button id="textAppender">Append some text</button>
+        <div id="secondDiv">Javascript is... </div>
+        <button id="textCreator"> Create some text</button>
+        <div id="emptyDiv"></div>
+    </div>
+    <button id="stylechanger"> Change first div style</button>
+    <input id="myInput" type="text" value="test" />
+    <button id="inputTextChanger">Change the text!</button>
+    <script type="text/javascript">
+        //This is a commment
+        /*
+        This is a multiline comment
+        */
+        document.getElementById("textChanger").onclick=function(){
+            document.getElementById("firstDiv").innerHTML="This is awesome!";
+        }
+        document.getElementById("textAppender").onclick=function(){
+            document.getElementById("secondDiv").innerHTML = document.getElementById("secondDiv").innerHTML + "Great!";
+        }
+        document.getElementById("textCreator").onclick=function(){
+            document.getElementById("emptyDiv").innerHTML = "<ul><li>Cat</li><li>Dog</li></ul>";
+        }
+        var divId="firstDiv";
+        document.getElementById("stylechanger").onclick=function(){
+            document.getElementById(divId).style.display="none";
+        }
+
+        var newText=document.getElementById("myInput").value;
+
+        document.getElementById("inputTextChanger").onclick=function() {
+            newText=document.getElementById("myInput").value;
+            document.getElementById("firstDiv").innerHTML=newText;
+        }
+    </script>
+
+</body>
+</html>
